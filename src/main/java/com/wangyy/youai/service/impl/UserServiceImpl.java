@@ -1,8 +1,10 @@
 package com.wangyy.youai.service.impl;
 
+import com.alibaba.fastjson.JSONObject;
 import com.wangyy.youai.dao.UserDao;
 import com.wangyy.youai.po.User;
 import com.wangyy.youai.service.UserService;
+import com.wangyy.youai.util.ApiLogger;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -18,6 +20,10 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User queryUserByUid(long uid) {
-        return userDao.queryUserByUid(uid);
+        User user = userDao.queryUserByUid(uid);
+        ApiLogger.info("User info:" + JSONObject.toJSONString(user));
+        ApiLogger.debug("User info:" + JSONObject.toJSONString(user));
+        ApiLogger.error("User info:" + JSONObject.toJSONString(user));
+        return user;
     }
 }
