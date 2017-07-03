@@ -5,13 +5,21 @@ import java.io.Serializable;
 /**
  * Created by qingjiang on 2017/6/14.
  */
-public class User implements Serializable{
+public class User extends Person implements Serializable {
 
+    private static final long serialVersionUID = 4945019694040425153L;
     private long uid;
-    private String username;
     private String password;
-    private byte sex;
     private String ext;
+
+    public User() {
+    }
+
+    public User(long uid, String username, String password) {
+        this.uid = uid;
+        this.username = username;
+        this.password = password;
+    }
 
     public long getUid() {
         return uid;
@@ -19,14 +27,6 @@ public class User implements Serializable{
 
     public void setUid(long uid) {
         this.uid = uid;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
     }
 
     public String getPassword() {
@@ -37,19 +37,21 @@ public class User implements Serializable{
         this.password = password;
     }
 
-    public byte getSex() {
-        return sex;
-    }
-
-    public void setSex(byte sex) {
-        this.sex = sex;
-    }
-
     public String getExt() {
         return ext;
     }
 
     public void setExt(String ext) {
         this.ext = ext;
+    }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("User{");
+        sb.append("uid=").append(uid);
+        sb.append(", password='").append(password).append('\'');
+        sb.append(", ext='").append(ext).append('\'');
+        sb.append('}');
+        return sb.toString();
     }
 }
