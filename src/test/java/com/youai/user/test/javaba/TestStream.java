@@ -3,12 +3,39 @@ package com.youai.user.test.javaba;
 import com.google.common.collect.Lists;
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * Created by qingjiang on 2017/6/21.
  */
 public class TestStream {
+
+
+    @Test
+    public void test3() {
+        List<String> list = Lists.newArrayList("Qingjiang Li", "Fang Jie", "zhangyuliang", "liupenghua", "zhangyanhui", "cuiyushun");
+        List<String> list2 = Lists.newArrayList("Fang Jie");
+        List<Integer> integerList = new ArrayList<>();
+        for (int i=0;i< 10300;i++) {
+            integerList.add(i);
+        }
+/*
+        boolean allMatch = list.stream().anyMatch(name -> name.contains("li"));
+        System.out.println(allMatch);
+
+        Stream<String> names = Stream.concat(list.stream(), list2.stream());
+        names.peek(System.out::println).count();
+        System.out.println("-----");
+        Stream<String> names2 = Stream.concat(list.stream(), list2.stream());
+        names2.distinct().peek(System.out::println).count();
+*/
+        Optional<Integer> min = integerList.stream().min((i1, i2) -> i1.compareTo(i2));
+        Integer integer = min.get();
+        System.out.println(integer);
+    }
+
 
     @Test
     public void test() {

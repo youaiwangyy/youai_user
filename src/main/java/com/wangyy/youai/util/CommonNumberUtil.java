@@ -22,4 +22,5 @@ public class CommonNumberUtil {
         Random random = new Random();
         return random.nextLong();
     }
+
 }
