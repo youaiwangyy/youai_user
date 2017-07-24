@@ -1,4 +1,4 @@
-package com.wangyy.youai.disignpattern;
+package com.wangyy.youai.designpattern;
 
 /**
  * Created by Qingjiang Li on 2017/7/2.

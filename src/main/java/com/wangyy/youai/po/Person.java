@@ -11,7 +11,7 @@ public class Person implements Serializable{
     private static final long serialVersionUID = -4296580673565920021L;
     public String username;
     public int age;
-    public byte sex;
+    public byte sex = 1;
 
     public String getUsername() {
         return username;

@@ -1,6 +1,6 @@
-package com.youai.user.test;
+package com.youai.user.test.designPattern;
 
-import com.wangyy.youai.disignpattern.*;
+import com.wangyy.youai.designpattern.*;
 import org.junit.Test;
 
 /**

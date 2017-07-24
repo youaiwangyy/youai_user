@@ -7,6 +7,8 @@ import java.util.Random;
  */
 public class CommonNumberUtil {
 
+
+
     /**
      * 返回两个时间数值的差值
      * @param var1 time1
